@@ -1,0 +1,232 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin:0 auto;
+  padding:0 auto;
+}
+
+body {
+  background-color: #7a6278;
+
+}
+
+.container {
+  height:530px;
+  width:350px;
+  position:absolute;
+  margin:auto;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+}
+
+.window {
+  width:250px;
+  height:390px;
+  background-color:#264745;
+  outline:12px solid #6a6a6a;
+  border-left:5px solid #498b86;
+  border-right:5px solid #498b86;
+  position:relative;
+  top:70px;
+  left:0px;
+
+}
+
+.window:before,
+.window:after {
+  content:"";
+  position:absolute;
+  background:linear-gradient(#59aaa3 50%, #6a6a6a 50%);
+}
+
+/* middle-window */
+.window:after {
+  height:15px;
+  width:250px;
+  left:-5px;
+  top:200px;
+}
+
+/* window ledge */
+.window:before {
+  height:15px;
+  width:300px;
+  left:-30px;
+  bottom:-15px;
+}
+
+.mountain-1 {
+  height:0;
+  width:0;
+  border-bottom:60px solid #203d3b;
+  border-right:20px solid transparent;
+  position:absolute;
+  bottom:0;
+}
+
+.mountain-2 {
+  height:0;
+  width:0;
+  border-bottom:70px solid #1c3432;
+  border-left:20px solid transparent;
+  border-right:20px solid transparent;
+  position:absolute;
+  bottom:0;
+  left:10px;
+}
+
+.mountain-3 {
+  height:0;
+  width:0;
+  border-bottom:40px solid #35615e;
+  border-left:10px solid transparent;
+  border-right:10px solid transparent;
+  position:absolute;
+  bottom:0;
+  left:50px;
+}
+
+.mountain-4 {
+  height:0;
+  width:0;
+  border-bottom:60px solid #203d3b;
+  border-left:20px solid transparent;
+  position:absolute;
+  bottom:0;
+  right:0px;
+}
+
+.mountain-5 {
+  height:0;
+  width:0;
+  border-bottom:50px solid #2d5451;
+  border-left:20px solid transparent;
+  border-right:20px solid transparent;
+  position:absolute;
+  bottom:0;
+  right:10px;
+}
+
+/* cat body  */
+.cat {
+  background-color:#ece2d4;
+  height:140px;
+  width:50px;
+  position:absolute;
+  bottom:-5px;
+  left:95px;
+  border-radius:40px 40px 0 0;
+}
+
+/* cat butt */
+
+.cat:before {
+  content:"";
+  position:absolute;
+  background-color:#ece2d4;
+  height:80px;
+  width:40px;
+  border-radius:0 80px 80px 0;
+  bottom:-0.10px;
+  left:43px;
+}
+
+/* cat's tail */
+.cat:after {
+  content:"";
+  position:absolute;
+  background-color:#ece2d4;
+  height:90px;
+  width:10px;
+  border-radius:5px;
+  bottom:-70px;
+  right:-5px;
+  transform:rotate(-15deg);
+  transform-origin:top;
+  animation:tail 4s infinite;
+}
+
+@keyframes tail {
+  50% {
+    transform:rotate(15deg)
+  }
+}
+
+.stripes {
+  height:10px;
+  width:50px;
+  background-color:#9c9c9c;
+  position:relative;
+  top:40px;
+  left:0;
+  z-index:9999;
+}
+
+/* cat left ear */
+
+.ears {
+  height:0;
+  width:0;
+  border-bottom: 40px solid #ece2d4;
+  border-right:33px solid transparent;
+  position:relative;
+  bottom:12px;
+  left:-5px;
+}
+
+/* cat right ear */
+
+.ears:before {
+  content:"";
+  position:absolute;
+  height:0;
+  width:0;
+  border-bottom:40px solid #ece2d4;
+  border-left:33px solid transparent;
+  bottom:-40px;
+  left:13px;
+}
+
+.moon {
+  height:80px;
+  width:80px;
+  border-radius:50%;
+  background-color:transparent;
+  box-shadow: -15px 8px 0 1px #fbcb78;
+  position:absolute;
+  left:50px;
+  top:60px;
+  animation:twinkle-moon 2s infinite;
+}
+
+@keyframes twinkle-moon {
+  50% {
+    opacity:0.7;
+
+  }
+}
+
+.stars {
+  background-color:#fbcb78;
+  height:5px;
+  width:5px;
+  border-radius:50%;
+  position:absolute;
+  top:30px;
+  left:150px;
+  box-shadow:80px 65px #fbcb78, 
+  -120px 150px #fbcb78, 
+  15px 250px #fbcb78,
+  -100px 280px #fbcb78;
+  animation:twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+  50% {
+    opacity:0.2;
+
+  }
+}
